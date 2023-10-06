@@ -17,10 +17,10 @@ app.use(express.json());
 // });
 
 // // Endpoint to get all perfumes
-// app.get('/perfumes', async (req, res) => {
-//     const perfumes = await prisma.perfume.findMany();
-//     res.json(perfumes);
-// });
+app.get('/perfumes', async (req, res) => {
+    const perfumes = await prisma.perfume.findMany();
+    res.json(perfumes);
+});
 
 
 // app.get('/users', async (req, res) => {
