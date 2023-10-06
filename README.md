@@ -79,7 +79,7 @@ So far so good there are no bugs related to this project 😎
 
 ## Support and contact details 🙂
 
-To make a contribution to the code used or any suggestions you can click on the contact link and email me your suggestions.
+To make a contribution to the code used or any suggestions you can click on the contact link and message me your suggestions.
 
 - Telegram: https://t.me/sean_code
 
