@@ -81,7 +81,7 @@ So far so good there are no bugs related to this project 😎
 
 To make a contribution to the code used or any suggestions you can click on the contact link and email me your suggestions.
 
-- Email: ngangajohn536@gmail.com
+- Telegram: https://t.me/sean_code
 
 ## MIT License
 
