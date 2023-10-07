@@ -28,7 +28,6 @@ app.get('/perfumes', async (req, res) => {
 
 
 
-
 //CRUD actions
 
 //Post Perfumes
@@ -128,6 +127,89 @@ app.get('/perfumes/rating/:rating', async (req, res) => {
 
 
 
+
+
+// Cart Routes
+// POST an item to the cart
+app.post('/cart', async (req, res) => {
+    try {
+      const { userId, perfumeId } = req.body;
+  
+      const cartItem = await prisma.cart.create({
+        data: {
+          userId,
+          perfumeId,
+        },
+      });
+  
+      res.json(cartItem);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Unable to add item to the cart.' });
+    }
+  });
+  
+
+
+//   All Cart Items
+  app.get('/cart', async (req, res) => {
+    try {
+      const cartItems = await prisma.cart.findMany();
+      res.json(cartItems);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Unable to fetch cart items.' });
+    }
+  });
+
+
+
+  //Cart Items by User ID
+  app.get('/cart/:userId', async (req, res) => {
+    try {
+      const userId = req.params.userId;
+      const cartItems = await prisma.cart.findMany({
+        where: {
+          userId,
+        },
+      });
+      res.json(cartItems);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Unable to fetch cart items.' });
+    }
+  });
+
+
+  //Delete ACTION
+  app.delete('/cart/:cartItemId', async (req, res) => {
+    try {
+      const cartItemId = req.params.cartItemId;
+  
+      // Check if the cart item exists
+      const existingCartItem = await prisma.cart.findUnique({
+        where: {
+          id: cartItemId,
+        },
+      });
+  
+      if (!existingCartItem) {
+        return res.status(404).json({ error: 'Cart item not found.' });
+      }
+  
+      // Delete the cart item
+      await prisma.cart.delete({
+        where: {
+          id: cartItemId,
+        },
+      });
+  
+      res.json({ message: 'Cart item deleted successfully.' });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Unable to delete cart item.' });
+    }
+  });
 
 
 
