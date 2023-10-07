@@ -105,7 +105,81 @@ $ node server.js
 - interact with CRUD actions on this <a href="https://www.postman.com/vlapp-emmerce/workspace/odour-perfumes/collection/26841432-2a54e5f4-4a02-4f5d-a3c8-15945bf80a14?action=share&creator=26841432" target="_blank">POSTMAN workspace</a>
 
 
-## Setup/Installation Requirements
+## Endpoints
+- GET All  Perfumes
+```
+/perfumes
+
+```
+- GET by ID
+
+```
+/perfumes/:ID
+```
+- GET by color
+
+```
+/perfumes/color/:COLOR
+```
+
+- GET by Category
+```
+/perfumes/category/:CATEGORY
+```
+
+-  GET by PRICE
+```
+/perfumes/price/:PRICE
+```
+
+- GET by Rating
+```
+/perfumes/rating/:RATING
+```
+
+- POST 
+```
+/perfume
+
+{
+    "name":"",
+    "category": "",
+    "price":"",
+    "rating": "",
+    "userId": ""
+}
+```
+- DELETE perfume
+```
+/perfumes/:ID
+```
+
+
+```
+
+```
+
+
+```
+
+```
+
+
+
+```
+
+```
+
+
+```
+
+```
+
+```
+
+```
+
+
 
 
 
