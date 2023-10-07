@@ -15,16 +15,34 @@ Developed by <a href="https://github.com/sean-code" target="_blank">Sean Nganga<
 
 ## Description
 
+- <a href="https://www.postman.com/vlapp-emmerce/workspace/odour-perfumes/collection/26841432-2a54e5f4-4a02-4f5d-a3c8-15945bf80a14?action=share&creator=26841432" target="_blank">POSTMAN Workspace</a>
+
+This project is a Node.js application that utilizes the Prisma ORM to interact with a MySQL database. It serves as a foundation for managing and retrieving data related to users and perfumes. The project includes a script for seeding the database with sample user and perfume data, providing a starting point for development.
+
+Key Features:
+
+Database Seeding: The included database seeding script populates the MySQL database with sample user and perfume data, enabling you to quickly get started with your project.
+
+User Management: The application includes routes for finding all users and individual users by their UUID IDs.
+
+Perfume Management: It offers various routes for managing and retrieving perfume data, including CRUD actions (Create, Read, Update, Delete) and filtering perfumes by category, color, price range, and rating.
+
+Express.js Web Server: The application is built using Express.js, providing a web server for handling API requests.
+
+Prisma ORM: Prisma is used as the ORM to interact with the MySQL database, making it easy to work with your data models.
+
+This project provides a solid foundation for building a web application that manages user and perfume data. You can easily extend and customize it to suit your specific requirements.
 
 
 ## Setup Requirements
+ Make sure these are installed in your system
 
 - Git
-- Web-browser or your choice
+- Web-browser of your choice
 - Github
 - MYSQL
 - Prisma
-- Node 16 ^
+- Node 16^
 - JS
 
 ## Setup Installation
@@ -35,32 +53,55 @@ Developed by <a href="https://github.com/sean-code" target="_blank">Sean Nganga<
 - Run the following command to start the server using virtual environment
 
 ```
-py
+$ git clone https://github.com/sean-code/perfumes-NGR.git 
 ```
 
-- To activate the virtual environment
+- navigate to the project directory
 
 ```
-sour
+$ cd perfumes-NGR
+```
+- Install project
+```
+$ npm install
+```
+- Database Configuration
+```
+Update your database configuration in your Prisma schema (usually found in schema.prisma). Make sure your database connection URL is set correctly in the .env
+```
+- Seeding Database
+```
+$ node seed.js
 ```
 
-```
-cur
-```
+- Generate  Prisma Client
 
 ```
-pip i
+$ npx prisma generate
 ```
 
-```
-chmo
-```
+- Migrate DB Schema and Push changes
 
 ```
-./start.sh
+$ npx prisma migrate 
+$ npx prisma db push
+
 ```
 
-- open the browser and ...
+- Run server.js and/or prisma studio
+```
+$ prisma studio
+```
+```
+$ node server.js
+```
+
+
+
+- open the browser on port 5555(prisma studio) / port 3000(json view)...
+
+
+- interact with CRUD actions on this <a href="https://www.postman.com/vlapp-emmerce/workspace/odour-perfumes/collection/26841432-2a54e5f4-4a02-4f5d-a3c8-15945bf80a14?action=share&creator=26841432" target="_blank">POSTMAN workspace</a>
 
 
 ## Setup/Installation Requirements
@@ -69,9 +110,34 @@ chmo
 
 ## Some Screenshots
 
-- Fully  responsive
+- MYSQL DB Tables
+    <br>
+  <img src="./assets/images/PlanetScale DB.png" alt="screenshot" />
+
+
+- All Perfumes
   <br>
-  <img src="" alt="screenshot" />
+  <img src="./assets/images/AllPerfumes.png" alt="screenshot" />
+
+
+- By ID
+    <br>
+  <img src="./assets/images/PerfumeByID.png" alt="screenshot" />
+
+- By Category
+    <br>
+  <img src="./assets/images/By Category.png" alt="screenshot" />
+
+
+- By Color
+    <br>
+  <img src="./assets/images/ByColor.png" alt="screenshot" />
+
+- PRISMA STUDIO VIEW -perfumes
+    <br>
+  <img src="./assets/images/Prisma Studio View.png" alt="screenshot" />
+
+
 
 ## Known Bugs
 
