@@ -65,9 +65,10 @@ $ cd perfumes-NGR
 ```
 $ npm install
 ```
-- Database Configuration
+- Database Configuration (Temporarily provided my DB URL)
 ```
 Update your database configuration in your Prisma schema (usually found in schema.prisma). Make sure your database connection URL is set correctly in the .env
+
 ```
 - Seeding Database
 ```
