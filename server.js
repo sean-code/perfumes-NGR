@@ -16,6 +16,10 @@ app.use(express.json());
 //     next();
 // });
 
+
+
+
+
 // // Endpoint to get all perfumes
 app.get('/perfumes', async (req, res) => {
     const perfumes = await prisma.perfume.findMany();
