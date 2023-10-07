@@ -118,7 +118,7 @@ $ node server.js
 
 - All Perfumes
   <br>
-  <img src="./assets/images/AllPerfumes.png" alt="screenshot" />
+  <img src="./assets/images/Perfumes.png" alt="screenshot" />
 
 
 - By ID
