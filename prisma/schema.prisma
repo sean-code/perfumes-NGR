@@ -15,19 +15,37 @@ model User {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   perfumes  Perfume[]
+  cart      Cart[]
 }
 
 model Perfume {
-  id        String   @id @default(uuid())
-  name      String
-  category  String
-  color     String
-  price     Float
-  rating    Int
-  userId    String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id          String   @id @default(uuid())
+  name        String
+  image       String
+  sku         String
+  description String
+  category    String
+  color       String
+  price       Float
+  rating      Int
+  userId      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  cart        Cart[]
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
+}
+
+model Cart {
+  id        String   @id @default(uuid())
+  userId    String
+  perfumeId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id])
+  perfume   Perfume  @relation(fields: [perfumeId], references: [id])
+
+  @@index([userId])
+  @@index([perfumeId])
 }

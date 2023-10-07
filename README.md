@@ -113,7 +113,7 @@ $ node server.js
 
 - MYSQL DB Tables
     <br>
-  <img src="./assets/images/PlanetScale DB.png" alt="screenshot" />
+  <img src="./assets/images/DBPAge.png" alt="screenshot" />
 
 
 - All Perfumes
