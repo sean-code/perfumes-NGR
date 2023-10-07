@@ -72,7 +72,7 @@ app.delete('/perfumes/:id', async (req, res) => {
 app.get('/perfumes/:id', async (req, res) => {
     const { id } = req.params;
     const perfume = await prisma.perfume.findUnique({
-        where: { id: Number(id) }
+        where: { id: (id) }
     });
     res.json(perfume);
 });
