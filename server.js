@@ -23,13 +23,6 @@ app.get('/perfumes', async (req, res) => {
 });
 
 
-// app.get('/users', async (req, res) => {
-//     const users = await prisma.user.findMany();
-//     res.json(users);
-// });
-
-
-
 
 
 //CRUD actions
@@ -127,12 +120,6 @@ app.get('/perfumes/rating/:rating', async (req, res) => {
     });
     res.json(perfumes);
 });
-
-
-
-
-
-
 
 
 
