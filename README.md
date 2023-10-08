@@ -153,31 +153,23 @@ $ node server.js
 ```
 /perfumes/:ID
 ```
-
-
-```
+ - CART items
 
 ```
-
+/cart
+```
+- Cart ITEMS by ID
 
 ```
-
+/cart/:userID
 ```
 
-
-
-```
+- DELETE cart items
 
 ```
-
-
+/cart/:cartItemId
 ```
 
-```
-
-```
-
-```
 
 
 
