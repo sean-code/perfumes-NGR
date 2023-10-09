@@ -172,9 +172,6 @@ $ node server.js
 
 
 
-
-
-
 ## Some Screenshots
 
 - MYSQL DB Tables
